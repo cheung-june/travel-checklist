@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont;
+  background: #f2f2f7;
+}
+
+.app {
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #007aff;
+  color: white;
+}
+
+.category {
+  margin-top: 20px;
+}
+
+.item {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item.dragging {
+  opacity: 0.5;
+}
