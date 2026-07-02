@@ -1,51 +1,107 @@
+/* ===== 基础布局（iOS风格） ===== */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont;
-  background: #f2f2f7;
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
+background: #f2f2f7;
+color: #1c1c1e;
 }
 
 .app {
-  padding: 16px;
+padding: 14px;
+max-width: 600px;
+margin: 0 auto;
 }
 
 h1 {
-  text-align: center;
+text-align: center;
+font-size: 22px;
+margin-bottom: 16px;
 }
 
-.controls {
-  display: flex;
-  gap: 8px;
-}
-
-input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-}
-
-button {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background: #007aff;
-  color: white;
-}
-
+/* ===== 分类卡片 ===== */
 .category {
-  margin-top: 20px;
+margin-top: 16px;
+background: #ffffff;
+border-radius: 16px;
+padding: 12px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+.category-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.category-header h3 {
+margin: 0;
+font-size: 16px;
+}
+
+/* 添加按钮 */
+.category-header button {
+background: #007aff;
+color: white;
+border: none;
+padding: 6px 12px;
+border-radius: 10px;
+font-size: 14px;
+}
+
+/* ===== 列表项 ===== */
 .item {
-  background: white;
-  padding: 12px;
-  border-radius: 12px;
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+margin-top: 10px;
+padding: 12px;
+border-radius: 12px;
+background: #f9f9fb;
+display: flex;
+align-items: center;
+font-size: 15px;
 }
 
-.item.dragging {
-  opacity: 0.5;
+/* checkbox */
+.item input {
+margin-right: 10px;
+transform: scale(1.2);
+}
+
+/* 完成状态 */
+.item input:checked + span {
+text-decoration: line-through;
+color: #8e8e93;
+}
+
+/* ===== 新增输入框 ===== */
+.add-input {
+display: flex;
+gap: 8px;
+margin-top: 10px;
+}
+
+.add-input input {
+flex: 1;
+padding: 10px;
+border-radius: 10px;
+border: none;
+background: #f2f2f7;
+font-size: 14px;
+}
+
+.add-input button {
+padding: 10px 14px;
+border-radius: 10px;
+border: none;
+background: #34c759;
+color: white;
+font-size: 14px;
+}
+
+/* ===== 点击反馈（更像App） ===== */
+button:active {
+transform: scale(0.95);
+opacity: 0.8;
+}
+
+.item:active {
+background: #ececf1;
 }
