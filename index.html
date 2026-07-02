@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!DOCTYPE html><html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Checklist</title>
+  <title>Travel Checklist</title>  <!-- PWA -->  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#007aff">  <!-- 样式 -->  <link rel="stylesheet" href="style.css">
+</head><body>
+  <div class="app">
+    <h1>✈️ Travel Checklist</h1><!-- 分类列表 -->
+<div id="lists"></div>
 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff">
-
-</head>
-<body>
-
-<div class="app">
-  <h1>✈️ Travel Checklist</h1>
-
-  <div class="controls">
-    <input id="newItem" placeholder="新增物品..." />
-    <button onclick="addItem()">添加</button>
-  </div>
-
-  <div id="lists"></div>
-
-  <div class="footer">
-    <button onclick="exportData()">导出</button>
-    <input type="file" id="importFile" onchange="importData(event)">
-  </div>
-</div>
-
-<script src="app.js"></script>
-</body>
+  </div>  <!-- 主逻辑 -->  <script src="app.js"></script>  <!-- Service Worker 注册 -->  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script></body>
 </html>
