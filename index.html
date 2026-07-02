@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Checklist</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+<div class="app">
+  <h1>✈️ Travel Checklist</h1>
+
+  <div class="controls">
+    <input id="newItem" placeholder="新增物品..." />
+    <button onclick="addItem()">添加</button>
+  </div>
+
+  <div id="lists"></div>
+
+  <div class="footer">
+    <button onclick="exportData()">导出</button>
+    <input type="file" id="importFile" onchange="importData(event)">
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
